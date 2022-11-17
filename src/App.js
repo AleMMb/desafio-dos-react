@@ -10,13 +10,15 @@ function App() {
 
 
   return (
-    <div className="AppBody my-[42px] mx-[200px] p-[30px] rounded-md h-64">
-      <h3 className="text-2xl text-orange-600 text-center tracking-tighter font-bold m-4">Log-in please</h3>
+    <div className="AppBody my-[120px] mx-[580px] p-[30px] rounded-md h-64 flex-column">
+      <h3 className=" text-2xl max-w-xs text-orange-600 text-center tracking-tighter font-bold">Log-in please</h3>
       <Input name = {name}  setName= {setName}
              password ={password} setPassword={setPassword}/>
-      {password === "252525" ? <Boton /> : null}
+      {password === "252525" && name !== "" ? <Boton /> : null}
     </div>
   );
 }
 
 export default App
+
+/* solo se muestra el boton cuando la password es 252525 y el user no sea vacío*/
